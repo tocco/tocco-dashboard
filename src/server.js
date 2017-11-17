@@ -53,15 +53,17 @@ if (__DEV__) {
 
 app.get('/api', (req, res) => {
   const buildGroup = group => {
-    const promises = group.children.map(child =>
-      apiAdapter
-        .getAdapter(group.type)
-        .getPromise(
+    const promises = group.children.map(child => {
+      const adapter = apiAdapter.getAdapter(group.type);
+      if (apiPasswords[group.type]) {
+        return adapter.getPromise(
           child,
           apiPasswords[group.type].username,
           apiPasswords[group.type].password,
-        ),
-    );
+        );
+      }
+      return adapter.getPromise(child);
+    });
 
     return Promise.all(promises).then(children => ({
       title: group.groupTitle,
