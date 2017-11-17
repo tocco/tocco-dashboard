@@ -53,7 +53,7 @@ class Dashboard extends React.Component {
       <div>
         <div className={s.header}>
           <h1>Tocco Dev Dashboard </h1>
-          <span>Aktualisiert {this.state.time.fromNow()}</span>
+          <span>Aktualisiert am: {this.state.time.format('LLLL')}</span>
         </div>
         {this.state.data.map(group => (
           <ItemGroup group={group} className={s.itemGroup} />
