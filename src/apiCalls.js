@@ -1,4 +1,28 @@
-module.exports = [
+export default [
+  {
+    groupTitle: 'Critical Installations',
+    priority: 99,
+    type: 'backoffice',
+    children: [
+      {
+        label: 'Critical Installations',
+        url:
+          'https://www.tocco.ch/nice2/rest/entities/Installation?_where=relInstallation_service_status.unique_id=="critical"',
+      },
+    ],
+  },
+  {
+    groupTitle: 'DB Refactoring',
+    priority: 90,
+    type: 'teamcity',
+    children: [
+      {
+        label: 'Nice2 DB-Refactoring existing Database (master)',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseMaster',
+      },
+    ],
+  },
   {
     groupTitle: 'Teamcity Merges',
     priority: 50,
@@ -39,6 +63,21 @@ module.exports = [
       {
         label: 'Merge 2.15 -> master',
         buildId: 'Nice2AutoMerge_Releases215toIntegrationMaster',
+      },
+    ],
+  },
+  {
+    groupTitle: 'Sonar',
+    priority: 40,
+    type: 'sonar',
+    children: [
+      {
+        label: 'Critical Issues',
+        metricKey: 'critical_violations',
+      },
+      {
+        label: 'Coverage',
+        metricKey: 'coverage',
       },
     ],
   },
