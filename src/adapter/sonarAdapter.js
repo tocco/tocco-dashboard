@@ -1,9 +1,17 @@
 import fetch from 'node-fetch';
 
-const transformResponse = (label, response) => ({
-  title: label,
+const transformResponse = (apiConfig, response) => ({
+  title: apiConfig.label,
   type: 'metric',
-  data: response.component.measures[0].value,
+  data: {
+    value: (1 * response.component.measures[0].value).toFixed(
+      apiConfig.decimalPlaces,
+    ),
+    diff: (1 * response.component.measures[0].periods[2].value).toFixed(
+      apiConfig.decimalPlaces,
+    ),
+    positivePositive: apiConfig.positivePositive,
+  },
 });
 
 export default {
@@ -18,6 +26,6 @@ export default {
 
     return fetch(url, { method: 'GET', headers })
       .then(response => response.json())
-      .then(response => transformResponse(apiConfig.label, response));
+      .then(response => transformResponse(apiConfig, response));
   },
 };

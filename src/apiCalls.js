@@ -74,10 +74,14 @@ export default [
       {
         label: 'Critical Issues',
         metricKey: 'critical_violations',
+        positivePositive: false,
+        decimalPlaces: 0,
       },
       {
         label: 'Coverage',
         metricKey: 'coverage',
+        positivePositive: true,
+        decimalPlaces: 2,
       },
     ],
   },

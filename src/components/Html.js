@@ -61,6 +61,10 @@ class Html extends React.Component {
             integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
             crossOrigin="anonymous"
           />
+          <link
+            rel="stylesheet"
+            href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+          />
         </head>
         <body>
           <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
