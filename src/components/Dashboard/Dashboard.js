@@ -10,6 +10,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import moment from 'moment';
 import s from './Dashboard.css';
 
 import ItemGroup from '../ItemGroup/ItemGroup';
@@ -22,6 +23,7 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: undefined };
+    moment.locale('de');
   }
 
   componentDidMount() {
@@ -36,7 +38,9 @@ class Dashboard extends React.Component {
       .fetch('http://localhost:3000/api', options)
       .then(resp => resp.json())
       .then(resp => {
-        this.setState({ data: resp });
+        this.setState({ data: resp, time: moment() });
+
+        setTimeout(() => this.loadData(), 1500);
       });
   }
 
@@ -45,9 +49,17 @@ class Dashboard extends React.Component {
       return null;
     }
 
-    return this.state.data.map(group => (
-      <ItemGroup group={group} className={s.itemGroup} />
-    ));
+    return (
+      <div>
+        <div className={s.header}>
+          <h1>Tocco Dev Dashboard </h1>
+          <span>Aktualisiert {this.state.time.fromNow()}</span>
+        </div>
+        {this.state.data.map(group => (
+          <ItemGroup group={group} className={s.itemGroup} />
+        ))}
+      </div>
+    );
   }
 }
 
