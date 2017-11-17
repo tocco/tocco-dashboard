@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Teamcity Status",
+    "priority": 99,
+    "children": [
+      {
+        "title": "Master Nightly",
+        "type": "boolean",
+        "data": {
+          "value": true,
+          "date": "2017123123"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Merges",
+    "priority": 80,
+    "children": [
+      {
+        "title": "Merge 2.13 > 2.14 ",
+        "type": "boolean",
+        "data": {
+          "value": false,
+          "date": "2017123123"
+        }
+      },
+      {
+        "title": "Merge 2.14 > 2.15 ",
+        "type": "boolean",
+        "data": {
+          "value": false,
+          "date": "2017123123"
+        }
+      }
+    ]
+  }
+]

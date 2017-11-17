@@ -8,18 +8,23 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Home.css';
-import Dashboard from '../../components/Dashboard/Dashboard';
+import s from './Signal.css';
 
-class Home extends React.Component {
+class Signal extends React.Component {
+  static propTypes = {
+    positive: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+  };
+
   render() {
     return (
-      <div>
-        <Dashboard />
+      <div className={s.signal}>
+        {this.props.title}: {JSON.stringify(this.props.positive)}
       </div>
     );
   }
 }
 
-export default withStyles(s)(Home);
+export default withStyles(s)(Signal);

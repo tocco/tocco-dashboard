@@ -51,7 +51,7 @@ if (__DEV__) {
   app.enable('trust proxy');
 }
 
-app.get('/tocco', (req, res) => {
+app.get('/api', (req, res) => {
   const buildGroup = group => {
     const promises = group.children.map(child =>
       apiAdapter
