@@ -19,9 +19,11 @@ class Signal extends React.Component {
   };
 
   render() {
+    const ledClass = this.props.positive ? s['led-green'] : s['led-red'];
     return (
       <div className={s.signal}>
-        {this.props.title}: {JSON.stringify(this.props.positive)}
+        <div className={ledClass} />
+        <div className={`${s.signalText} text-center`}>{this.props.title}</div>
       </div>
     );
   }

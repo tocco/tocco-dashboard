@@ -19,9 +19,11 @@ class ItemGroup extends React.Component {
         <div className="card">
           <div className="card-header">{this.props.group.title}</div>
           <div className="card-block">
-            <p className="card-text">
-              {this.props.group.children.map(item => typeFactory(item))}
-            </p>
+            <div className="row">
+              {this.props.group.children.map(item => (
+                <div className="col-md-3 mx-auto">{typeFactory(item)}</div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
