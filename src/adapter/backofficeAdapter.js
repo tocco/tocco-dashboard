@@ -2,14 +2,14 @@ import base64 from 'base-64';
 import fetch from 'node-fetch';
 
 const transformResponse = (label, response) => {
-  const labels = response.data.map(installation => ({
-    label: installation.fields.instance.value,
-  }));
+  const labels = response.data.map(
+    installation => installation.fields.instance.value,
+  );
 
   return {
     title: label,
     type: 'labelList',
-    data: [labels],
+    data: labels,
   };
 };
 
