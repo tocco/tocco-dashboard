@@ -2,6 +2,7 @@ import * as React from 'react';
 import Signal from '../Signal/Signal';
 import LabelList from '../LabelList/LabelList';
 import Metric from '../Metric/Metric';
+import ChuckNorris from '../ChuckNorris/ChuckNorris';
 
 export default item => {
   switch (item.type) {
@@ -18,6 +19,8 @@ export default item => {
           positivePositive={item.data.positivePositive}
         />
       );
+    case 'chuckNorris':
+      return <ChuckNorris joke={item.data.value} />;
     default:
       return null;
   }

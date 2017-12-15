@@ -89,4 +89,14 @@ export default [
       },
     ],
   },
+  {
+    groupTitle: 'Chuck Norris',
+    priority: 10,
+    type: 'chucknorris',
+    children: [
+      {
+        limitTo: 'nerdy,explicit',
+      },
+    ],
+  },
 ];
