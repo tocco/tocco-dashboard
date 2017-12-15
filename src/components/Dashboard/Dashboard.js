@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
     super(props);
     this.state = {
       data: undefined,
-      reloadInMillisecond: 5000,
+      reloadInMillisecond: 60000,
       timer: {},
     };
     this.updateTimer = this.updateTimer.bind(this);
