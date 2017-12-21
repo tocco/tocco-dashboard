@@ -10,9 +10,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import moment from 'moment';
+import sprintf from 'sprintf';
 import s from './Dashboard.css';
-
 import ItemGroup from '../ItemGroup/ItemGroup';
 
 class Dashboard extends React.Component {
@@ -22,13 +21,63 @@ class Dashboard extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { data: undefined };
-    moment.locale('de');
+    this.state = {
+      data: undefined,
+      reloadInMillisecond: 5000,
+      timer: {},
+    };
+    this.updateTimer = this.updateTimer.bind(this);
   }
 
   componentDidMount() {
+    this.startTimer();
     this.loadData();
   }
+
+  startTimer() {
+    this.setState({
+      timer: {
+        elapsedSeconds: 0,
+        elapsedTime: this.secondsToTime(0),
+        overtime: false,
+      },
+    });
+
+    setInterval(this.updateTimer, 1000);
+  }
+
+  updateTimer() {
+    const elapsedSeconds = this.state.timer.elapsedSeconds + 1;
+    const elapsedTime = this.secondsToTime(elapsedSeconds);
+    const overtime = elapsedSeconds > this.state.reloadInMillisecond / 1000;
+
+    this.setState({
+      timer: {
+        elapsedSeconds,
+        elapsedTime,
+        overtime,
+      },
+    });
+  }
+
+  /* eslint-disable */
+  secondsToTime(secs) {
+    const hours = Math.floor(secs / 3600);
+    const minutes = Math.floor((secs % 3600) / 60);
+    const seconds = secs % 60;
+    let elapsedTime;
+
+    if (hours > 0) {
+      elapsedTime = sprintf('%d:%02d:%02d', hours, minutes, seconds);
+    } else if (minutes > 0) {
+      elapsedTime = sprintf('%02d:%02d', minutes, seconds);
+    } else {
+      elapsedTime = sprintf('%d Sekunden', seconds);
+    }
+
+    return elapsedTime;
+  }
+  /* eslint-enable */
 
   loadData() {
     const options = {
@@ -38,9 +87,14 @@ class Dashboard extends React.Component {
       .fetch('http://localhost:3000/api', options)
       .then(resp => resp.json())
       .then(resp => {
-        this.setState({ data: resp, time: moment() });
-
-        setTimeout(() => this.loadData(), 1500);
+        this.setState({ data: resp });
+        this.setState({
+          timer: {
+            elapsedSeconds: 0,
+            elapsedTime: this.secondsToTime(0),
+          },
+        });
+        setTimeout(() => this.loadData(), this.state.reloadInMillisecond);
       });
   }
 
@@ -53,7 +107,15 @@ class Dashboard extends React.Component {
       <div>
         <div className={s.header}>
           <h1>Tocco Dev Dashboard </h1>
-          <span>Aktualisiert am: {this.state.time.format('LLLL')}</span>
+          <span
+            className={
+              this.state.timer.overtime
+                ? 'badge badge-danger'
+                : 'badge badge-success'
+            }
+          >
+            aktualisiert vor {this.state.timer.elapsedTime}
+          </span>
         </div>
         {this.state.data.map(group => (
           <ItemGroup group={group} className={s.itemGroup} />
