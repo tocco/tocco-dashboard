@@ -2,6 +2,7 @@ export default [
   {
     groupTitle: 'Critical Installations',
     priority: 99,
+    columnClass: 'col-md-6',
     type: 'backoffice',
     children: [
       {
@@ -14,6 +15,7 @@ export default [
   {
     groupTitle: 'DB Refactoring',
     priority: 90,
+    columnClass: 'col-md-6',
     type: 'teamcity',
     children: [
       {
@@ -26,6 +28,7 @@ export default [
   {
     groupTitle: 'TeamCity – Merge Branches',
     priority: 50,
+    columnClass: 'col-12',
     type: 'teamcity',
     children: [
       {
@@ -69,6 +72,7 @@ export default [
   {
     groupTitle: 'Sonar',
     priority: 40,
+    columnClass: 'col-12',
     type: 'sonar',
     children: [
       {

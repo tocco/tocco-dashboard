@@ -104,22 +104,26 @@ class Dashboard extends React.Component {
     }
 
     return (
-      <div>
-        <div className={s.header}>
-          <h1>Tocco Dev Dashboard </h1>
-          <span
-            className={
-              this.state.timer.overtime
-                ? 'badge badge-danger'
-                : 'badge badge-success'
-            }
-          >
-            aktualisiert vor {this.state.timer.elapsedTime}
-          </span>
+      <div className="container-fluid">
+        <div className={`row ${s.header}`}>
+          <div className="col">
+            <h1>Tocco&nbsp;Dev&nbsp;Dashboard</h1>
+          </div>
+          <div className="col">
+            <span
+              className={
+                this.state.timer.overtime
+                  ? 'badge badge-danger'
+                  : 'badge badge-success'
+              }
+            >
+              aktualisiert vor {this.state.timer.elapsedTime}
+            </span>
+          </div>
         </div>
-        {this.state.data.map(group => (
-          <ItemGroup group={group} className={s.itemGroup} />
-        ))}
+        <div className="row">
+          {this.state.data.map(group => <ItemGroup group={group} />)}
+        </div>
       </div>
     );
   }

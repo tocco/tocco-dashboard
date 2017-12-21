@@ -8,22 +8,21 @@ import typeFactory from './typeFactory';
 class ItemGroup extends React.Component {
   static propTypes = {
     group: PropTypes.shape({
-      title: PropTypes.string,
       children: PropTypes.array,
+      columnClass: PropTypes.string,
+      title: PropTypes.string,
     }).isRequired,
   };
 
   render() {
     return (
-      <div className={s.itemGroup}>
-        <div className="card">
-          <div className="card-header">{this.props.group.title}</div>
-          <div className="card-block">
-            <div className="row">
-              {this.props.group.children.map(item => (
-                <div className="col-md-3 mx-auto">{typeFactory(item)}</div>
-              ))}
-            </div>
+      <div className={this.props.group.columnClass}>
+        <div className={`card ${s.card}`}>
+          <div className={`card-header ${s['card-header']}`}>
+            {this.props.group.title}
+          </div>
+          <div className={`card-body ${s['card-body']}`}>
+            {this.props.group.children.map(item => typeFactory(item))}
           </div>
         </div>
       </div>

@@ -64,6 +64,7 @@ app.get('/api', (req, res) => {
 
     return Promise.all(promises).then(children => ({
       title: group.groupTitle,
+      columnClass: group.columnClass,
       priority: group.priority,
       children,
     }));
