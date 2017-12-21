@@ -13,6 +13,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import sprintf from 'sprintf';
 import s from './Dashboard.css';
 import ItemGroup from '../ItemGroup/ItemGroup';
+import Signal from '../Signal/Signal';
 
 class Dashboard extends React.Component {
   static contextTypes = {
@@ -110,15 +111,10 @@ class Dashboard extends React.Component {
             <h1>Tocco&nbsp;Dev&nbsp;Dashboard</h1>
           </div>
           <div className="col">
-            <span
-              className={
-                this.state.timer.overtime
-                  ? 'badge badge-danger'
-                  : 'badge badge-success'
-              }
-            >
-              aktualisiert vor {this.state.timer.elapsedTime}
-            </span>
+            <Signal
+              title={`aktualisiert vor ${this.state.timer.elapsedTime}`}
+              positive={!this.state.timer.overtime}
+            />
           </div>
         </div>
         <div className="row">
