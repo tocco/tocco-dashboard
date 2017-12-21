@@ -19,12 +19,12 @@ class Signal extends React.Component {
   };
 
   render() {
-    const ledClass = this.props.positive ? s['led-green'] : s['led-red'];
+    const state = this.props.positive ? 'success' : 'danger';
+    const stateClass = this.props.positive ? '' : s['badge-danger'];
     return (
-      <div className={s.signal}>
-        <div className={ledClass} />
-        <div className={`${s.signalText} text-center`}>{this.props.title}</div>
-      </div>
+      <span className={`badge ${s.badge} badge-${state} ${stateClass}`}>
+        {this.props.title}
+      </span>
     );
   }
 }
