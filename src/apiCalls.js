@@ -19,7 +19,7 @@ export default [
     type: 'teamcity',
     children: [
       {
-        label: 'Nice2 DB-Refactoring existing Database (master)',
+        label: 'DB-Refactoring Master',
         buildId:
           'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseMaster',
       },
