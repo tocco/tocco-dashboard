@@ -1,6 +1,6 @@
 import base64 from 'base-64';
 import fetch from 'node-fetch';
-import logError from '../components/Error';
+import logError from '../error';
 
 const transformResponse = (label, response) => {
   const labels = response.data.map(

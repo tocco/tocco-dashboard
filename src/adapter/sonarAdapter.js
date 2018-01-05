@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import logError from '../components/Error';
+import logError from '../error';
 
 const transformResponse = (apiConfig, response) => ({
   title: apiConfig.label,
