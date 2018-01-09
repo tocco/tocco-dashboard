@@ -18,7 +18,9 @@ class ChuckNorris extends React.Component {
   };
 
   render() {
-    return <p className={m.paragraph}>{this.props.joke}</p>;
+    return (
+      <p className={m.paragraph}>{this.props.joke.replace(/&\w+;/g, '')}</p>
+    );
   }
 }
 
