@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import logError from '../error';
 
 const transformResponse = (apiConfig, response) => ({
   title: apiConfig.label,
@@ -26,6 +27,7 @@ export default {
 
     return fetch(url, { method: 'GET', headers })
       .then(response => response.json())
-      .then(response => transformResponse(apiConfig, response));
+      .then(response => transformResponse(apiConfig, response))
+      .catch(error => logError('sonarAdapter', 'metric', error, apiConfig));
   },
 };

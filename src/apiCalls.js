@@ -2,6 +2,7 @@ export default [
   {
     groupTitle: 'Critical Installations',
     priority: 99,
+    columnClass: 'col-md-6',
     type: 'backoffice',
     children: [
       {
@@ -14,54 +15,56 @@ export default [
   {
     groupTitle: 'DB Refactoring',
     priority: 90,
+    columnClass: 'col-md-6',
     type: 'teamcity',
     children: [
       {
-        label: 'Nice2 DB-Refactoring existing Database (master)',
+        label: 'DB-Refactoring Master',
         buildId:
           'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseMaster',
       },
     ],
   },
   {
-    groupTitle: 'Teamcity Merges',
+    groupTitle: 'TeamCity – Merge Branches',
     priority: 50,
+    columnClass: 'col-12',
     type: 'teamcity',
     children: [
       {
-        label: 'Merge 2.7.5 -> 2.8',
+        label: '2.7.5 ➞ 2.8',
         buildId: 'Nice2AutoMerge_Releases275toIntegrationReleases28',
       },
       {
-        label: 'Merge 2.8 -> 2.9',
+        label: '2.8 ➞ 2.9',
         buildId: 'Nice2AutoMerge_Releases28toIntegrationReleases29',
       },
       {
-        label: 'Merge 2.9 -> 2.10',
+        label: '2.9 ➞ 2.10',
         buildId: 'Nice2AutoMerge_Releases29toIntegrationReleases210',
       },
       {
-        label: 'Merge 2.10 -> 2.11',
+        label: '2.10 ➞ 2.11',
         buildId: 'Nice2AutoMerge_Releases210toIntegrationReleases211',
       },
       {
-        label: 'Merge 2.11 -> 2.12',
+        label: '2.11 ➞ 2.12',
         buildId: 'Nice2AutoMerge_Releases211toIntegrationMaster',
       },
       {
-        label: 'Merge 2.12 -> 2.13',
+        label: '2.12 ➞ 2.13',
         buildId: 'Nice2AutoMerge_Releases212toIntegrationMaster',
       },
       {
-        label: 'Merge 2.13 -> 2.14',
+        label: '2.13 ➞ 2.14',
         buildId: 'Nice2AutoMerge_Releases213toIntegrationMaster',
       },
       {
-        label: 'Merge 2.14 -> 2.15',
+        label: '2.14 ➞ 2.15',
         buildId: 'Nice2AutoMerge_Releases214toIntegration_Releases215',
       },
       {
-        label: 'Merge 2.15 -> master',
+        label: '2.15 ➞ master',
         buildId: 'Nice2AutoMerge_Releases215toIntegrationMaster',
       },
     ],
@@ -69,6 +72,7 @@ export default [
   {
     groupTitle: 'Sonar',
     priority: 40,
+    columnClass: 'col-12',
     type: 'sonar',
     children: [
       {
