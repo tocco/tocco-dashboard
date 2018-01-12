@@ -72,7 +72,7 @@ export default [
   {
     groupTitle: 'Sonar',
     priority: 40,
-    columnClass: 'col-12',
+    columnClass: 'col-6',
     type: 'sonar',
     children: [
       {
@@ -86,6 +86,17 @@ export default [
         metricKey: 'coverage',
         positivePositive: true,
         decimalPlaces: 2,
+      },
+    ],
+  },
+  {
+    groupTitle: 'Programming like Chuck Norris',
+    priority: 10,
+    columnClass: 'col-6',
+    type: 'chucknorris',
+    children: [
+      {
+        limitTo: 'nerdy,explicit',
       },
     ],
   },

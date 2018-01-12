@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
     super(props);
     this.state = {
       data: undefined,
-      reloadInMillisecond: 5000,
+      reloadInMillisecond: 60000,
       timer: {},
     };
     this.updateTimer = this.updateTimer.bind(this);
@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
   updateTimer() {
     const elapsedSeconds = this.state.timer.elapsedSeconds + 1;
     const elapsedTime = this.secondsToTime(elapsedSeconds);
-    const overtime = elapsedSeconds > this.state.reloadInMillisecond / 1000;
+    const overtime = elapsedSeconds > this.state.reloadInMillisecond / 1000 + 3;
 
     this.setState({
       timer: {

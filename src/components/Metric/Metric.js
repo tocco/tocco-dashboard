@@ -28,7 +28,7 @@ class Metric extends React.Component {
         ? 'text-success'
         : 'text-danger';
     return (
-      <div className={m.metric}>
+      <span className={m.metric}>
         <strong>{this.props.title}:</strong>&nbsp;
         {this.props.value}&nbsp;
         <i
@@ -39,7 +39,7 @@ class Metric extends React.Component {
           ({this.props.diff > 0 ? '+' : ''}
           {this.props.diff})
         </span>
-      </div>
+      </span>
     );
   }
 }
