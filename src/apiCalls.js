@@ -61,11 +61,15 @@ export default [
       },
       {
         label: '2.14 ➞ 2.15',
-        buildId: 'Nice2AutoMerge_Releases214toIntegration_Releases215',
+        buildId: 'Nice2AutoMerge_Releases214toIntegrationReleases215',
       },
       {
-        label: '2.15 ➞ master',
-        buildId: 'Nice2AutoMerge_Releases215toIntegrationMaster',
+        label: '2.15 ➞ 2.16',
+        buildId: 'Nice2AutoMerge_Releases215toIntegrationReleases216',
+      },
+      {
+        label: '2.16 ➞ master',
+        buildId: 'Nice2AutoMerge_Releases216toIntegrationMaster',
       },
     ],
   },
