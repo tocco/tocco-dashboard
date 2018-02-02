@@ -20,7 +20,9 @@ class Signal extends React.Component {
 
   render() {
     const state = this.props.positive ? 'success' : 'danger';
-    const stateClass = this.props.positive ? '' : s['badge-danger'];
+    const stateClass = this.props.positive
+      ? s['badge-success']
+      : s['badge-danger'];
     return (
       <span className={`badge ${s.badge} badge-${state} ${stateClass}`}>
         {this.props.title}
