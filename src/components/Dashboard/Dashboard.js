@@ -84,8 +84,9 @@ class Dashboard extends React.Component {
     const options = {
       headers: new Headers({ 'Content-Type': 'application/json' }),
     };
+    let url = `${window.location.protocol}//${window.location.host}/api`;
     this.data = this.context
-      .fetch('http://localhost:3000/api', options)
+      .fetch(url, options)
       .then(resp => resp.json())
       .then(resp => {
         this.setState({ data: resp });

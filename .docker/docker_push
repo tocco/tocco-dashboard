@@ -1,0 +1,5 @@
+#!/bin/bash
+set -Eeu
+
+docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+docker push toccoag/dashboard
