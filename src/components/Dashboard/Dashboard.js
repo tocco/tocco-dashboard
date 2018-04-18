@@ -72,8 +72,10 @@ class Dashboard extends React.Component {
       elapsedTime = sprintf('%d:%02d:%02d', hours, minutes, seconds);
     } else if (minutes > 0) {
       elapsedTime = sprintf('%02d:%02d', minutes, seconds);
+    } else if (seconds == 1) {
+      elapsedTime = '1 second';
     } else {
-      elapsedTime = sprintf('%d Sekunden', seconds);
+      elapsedTime = sprintf('%d seconds', seconds);
     }
 
     return elapsedTime;
@@ -113,7 +115,7 @@ class Dashboard extends React.Component {
           </div>
           <div className="col">
             <Signal
-              title={`aktualisiert vor ${this.state.timer.elapsedTime}`}
+              title={`refreshed ${this.state.timer.elapsedTime} ago`}
               positive={!this.state.timer.overtime}
             />
           </div>
