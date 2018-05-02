@@ -68,9 +68,13 @@ export default [
         buildId: 'Nice2AutoMerge_Releases215toIntegrationReleases216',
       },
       {
-        label: '2.16 ➞ master',
-        buildId: 'Nice2AutoMerge_Releases216toIntegrationMaster',
+        label: '2.16 ➞ 2.17',
+        buildId: 'Nice2AutoMerge_Releases216toIntegrationReleases217',
       },
+      {
+        label: '2.17 ➞ master',
+        buildId: 'Nice2AutoMerge_Releases217toIntegrationMaster',
+      }
     ],
   },
   {
