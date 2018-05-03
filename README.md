@@ -2,6 +2,19 @@
 
 Tocco Innovation Day project based on react-starter-kit
 
+## URL
+
+The dashboard is reachable at these addresses:
+
+* https://dashboard.tocco.ch
+* http://xmsjjm6rmqsstcjs.onion
+* http://fpmntuq7o2vcaw24sfsjyfhk7koofbrtjika7awddqyysbo5buil5gad.onion
+
+## Deployment
+
+Commits pushed to master are automatically deployed. However, as of now, the page needs to be reloaded
+manually browser-side to see the updates.
+
 ## Credentials for Adapters
 
 ### `credentials.json`
