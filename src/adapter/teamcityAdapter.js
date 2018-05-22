@@ -13,7 +13,7 @@ const transformResponse = (label, response) => ({
 
 export default {
   getPromise: (apiConfig, username, password) => {
-    const url = `https://dev.tocco.ch/teamcity/app/rest/latest/buildTypes/id:${
+    const url = `https://tc.tocco.ch/app/rest/latest/buildTypes/id:${
       apiConfig.buildId
     }/builds/count:1`;
 
