@@ -32,49 +32,93 @@ export default [
     type: 'teamcity',
     children: [
       {
-        label: '2.7.5 ➞ 2.8',
+        label: '2.7.5 ➞ int/2.8',
         buildId: 'Nice2AutoMerge_Releases275toIntegrationReleases28',
       },
       {
-        label: '2.8 ➞ 2.9',
+        label: 'int/2.8 ➞ 2.8',
+        buildId: 'Nice2AutoMerge_IntegrationReleases28toReleases28',
+      },
+      {
+        label: '2.8 ➞ int/2.9',
         buildId: 'Nice2AutoMerge_Releases28toIntegrationReleases29',
       },
       {
-        label: '2.9 ➞ 2.10',
+        label: 'int/2.9 ➞ 2.9',
+        buildId: 'Nice2AutoMerge_IntegrationReleases29toReleases29',
+      },
+      {
+        label: '2.9 ➞ int/2.10',
         buildId: 'Nice2AutoMerge_Releases29toIntegrationReleases210',
       },
       {
-        label: '2.10 ➞ 2.11',
+        label: 'int/2.10 ➞ 2.10',
+        buildId: 'Nice2AutoMerge_IntegrationReleases210toReleases210',
+      },
+      {
+        label: '2.10 ➞ int/2.11',
         buildId: 'Nice2AutoMerge_Releases210toIntegrationReleases211',
       },
       {
-        label: '2.11 ➞ 2.12',
+        label: 'int/2.11 ➞ 2.11',
+        buildId: 'Nice2AutoMerge_IntegrationReleases211toReleases211',
+      },
+      {
+        label: '2.11 ➞ int/2.12',
         buildId: 'Nice2AutoMerge_Releases211toIntegrationMaster',
       },
       {
-        label: '2.12 ➞ 2.13',
+        label: 'int/2.12 ➞ 2.12',
+        buildId: 'Nice2AutoMerge_IntegrationReleases212toReleases212',
+      },
+      {
+        label: '2.12 ➞ int/2.13',
         buildId: 'Nice2AutoMerge_Releases212toIntegrationMaster',
       },
       {
-        label: '2.13 ➞ 2.14',
+        label: 'int/2.13 ➞ 2.13',
+        buildId: 'Nice2AutoMerge_IntegrationReleases213toReleases213',
+      },
+      {
+        label: '2.13 ➞ int/2.14',
         buildId: 'Nice2AutoMerge_Releases213toIntegrationMaster',
       },
       {
-        label: '2.14 ➞ 2.15',
+        label: 'int/2.14 ➞ 2.14',
+        buildId: 'Nice2AutoMerge_IntegrationReleases214toReleases214',
+      },
+      {
+        label: '2.14 ➞ int/2.15',
         buildId: 'Nice2AutoMerge_Releases214toIntegrationReleases215',
       },
       {
-        label: '2.15 ➞ 2.16',
+        label: 'int/2.15 ➞ 2.15',
+        buildId: 'Nice2AutoMerge_IntegrationReleases215toReleases215',
+      },
+      {
+        label: '2.15 ➞ int/2.16',
         buildId: 'Nice2AutoMerge_Releases215toIntegrationReleases216',
       },
       {
-        label: '2.16 ➞ 2.17',
+        label: 'int/2.16 ➞ 2.16',
+        buildId: 'Nice2AutoMerge_IntegrationReleases216toReleases216',
+      },
+      {
+        label: '2.16 ➞ int/2.17',
         buildId: 'Nice2AutoMerge_Releases216toIntegrationReleases217',
       },
       {
-        label: '2.17 ➞ master',
+        label: 'int/2.17 ➞ 2.17',
+        buildId: 'Nice2AutoMerge_IntegrationReleases217toReleases217',
+      },
+      {
+        label: '2.17 ➞ int/master',
         buildId: 'Nice2AutoMerge_Releases217toIntegrationMaster',
-      }
+      },
+      {
+        label: 'int/master ➞ master',
+        buildId: 'Nice2AutoMerge_IntegrationMasterToMaster',
+      },
     ],
   },
   {
