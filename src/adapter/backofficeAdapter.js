@@ -7,6 +7,10 @@ const transformResponse = (label, response) => {
     installation => installation.fields.instance.value,
   );
 
+  if (labels.length === 0) {
+    return null;
+  }
+
   return {
     title: label,
     type: 'labelList',
