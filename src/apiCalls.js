@@ -30,6 +30,9 @@ export default [
     priority: 50,
     columnClass: 'col-12',
     type: 'teamcity',
+    typeAdapterArgs: {
+      hideSuccess: true,
+    },
     children: [
       {
         label: '2.7.5 ➞ int/2.8',

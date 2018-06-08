@@ -22,7 +22,9 @@ class ItemGroup extends React.Component {
             {this.props.group.title}
           </div>
           <div className={`card-body ${s['card-body']}`}>
-            {this.props.group.children.map(item => typeFactory(item))}
+            {this.props.group.children
+              .filter(item => !!item)
+              .map(item => typeFactory(item))}
           </div>
         </div>
       </div>
