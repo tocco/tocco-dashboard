@@ -57,6 +57,7 @@ app.get('/api', (req, res) => {
           child,
           apiPasswords[group.type].username,
           apiPasswords[group.type].password,
+          group.typeAdapterArgs,
         );
       }
       return adapter.getPromise(child);
