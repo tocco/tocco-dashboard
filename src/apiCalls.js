@@ -17,11 +17,72 @@ export default [
     priority: 90,
     columnClass: 'col-md-6',
     type: 'teamcity',
+    typeAdapterArgs: {
+      hideSuccess: true,
+    },
     children: [
       {
-        label: 'DB-Refactoring Master',
+        label: 'master - existing',
         buildId:
           'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseMaster',
+      },
+      {
+        label: 'master - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseMaster',
+      },
+      {
+        label: '2.17 - existing',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabase217',
+      },
+      {
+        label: '2.17 - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabase217',
+      },
+      {
+        label: '2.16 - existing',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseV216',
+      },
+      {
+        label: '2.16 - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV216',
+      },
+      {
+        label: '2.15 - existing',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseV215',
+      },
+      {
+        label: '2.15 - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV215',
+      },
+      {
+        label: '2.14 - existing',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseV214',
+      },
+      {
+        label: '2.14 - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV214',
+      },
+      {
+        label: '2.13 - existing',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseV213',
+      },
+      {
+        label: '2.13 - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV213',
+      },
+      {
+        label: '2.12 - existing',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseV212',
+      },
+      {
+        label: '2.12 - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV212',
       },
     ],
   },
