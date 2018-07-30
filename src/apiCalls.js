@@ -186,7 +186,7 @@ export default [
       },
       {
         label: '2.17 ➞ int/2.18',
-        buildId: 'Nice2AutoMerge_Releases217toIntegrationMaster',
+        buildId: 'Nice2AutoMerge_Releases217toIntegrationReleases218',
       },
       {
         label: 'int/2.18 ➞ 2.18',
