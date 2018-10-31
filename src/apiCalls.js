@@ -31,6 +31,15 @@ export default [
         buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseMaster',
       },
       {
+        label: '2.19 - existing',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabase219',
+      },
+      {
+        label: '2.19 - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabase219',
+      },
+      {
         label: '2.18 - existing',
         buildId:
           'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabase218',
@@ -193,8 +202,16 @@ export default [
         buildId: 'Nice2AutoMerge_IntegrationReleases218toReleases218',
       },
       {
-        label: '2.18 ➞ int/master',
-        buildId: 'Nice2AutoMerge_Releases218toIntegrationMaster',
+        label: '2.18 ➞ int/2.19',
+        buildId: 'Nice2AutoMerge_Releases218toIntegrationReleases219',
+      },
+      {
+        label: 'int/2.19 ➞ 2.19',
+        buildId: 'Nice2AutoMerge_IntegrationReleases219toReleases219',
+      },
+      {
+        label: '2.19 ➞ int/master',
+        buildId: 'Nice2AutoMerge_Releases219toIntegrationMaster',
       },
       {
         label: 'int/master ➞ master',
