@@ -84,33 +84,6 @@ export default [
         label: '2.15 - new',
         buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV215',
       },
-      {
-        label: '2.14 - existing',
-        buildId:
-          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseV214',
-      },
-      {
-        label: '2.14 - new',
-        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV214',
-      },
-      {
-        label: '2.13 - existing',
-        buildId:
-          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseV213',
-      },
-      {
-        label: '2.13 - new',
-        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV213',
-      },
-      {
-        label: '2.12 - existing',
-        buildId:
-          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabaseV212',
-      },
-      {
-        label: '2.12 - new',
-        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseV212',
-      },
     ],
   },
   {
