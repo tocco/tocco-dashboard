@@ -11,7 +11,6 @@ Displayed data:
 - Failed DB refactorings
 - Failed merges
 - Failed deployments (internal test systems)
-- Test Coverage and SonarQube issues for Nice2 project
 
 ## URL
 

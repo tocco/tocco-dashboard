@@ -306,35 +306,4 @@ export default [
       },
     ],
   },
-  {
-    groupTitle: 'Sonar',
-    priority: 40,
-    columnClass: 'col-6',
-    type: 'sonar',
-    children: [
-      {
-        label: 'Critical Issues',
-        metricKey: 'critical_violations',
-        positivePositive: false,
-        decimalPlaces: 0,
-      },
-      {
-        label: 'Coverage',
-        metricKey: 'coverage',
-        positivePositive: true,
-        decimalPlaces: 2,
-      },
-    ],
-  },
-  {
-    groupTitle: 'Programming like Chuck Norris',
-    priority: 10,
-    columnClass: 'col-6',
-    type: 'chucknorris',
-    children: [
-      {
-        limitTo: 'nerdy,explicit',
-      },
-    ],
-  },
 ];
