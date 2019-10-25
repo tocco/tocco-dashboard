@@ -300,10 +300,6 @@ export default [
         label: 'test212.tocco.ch',
         buildId: 'ContinuousDeliveryNg_Test_Test212',
       },
-      {
-        label: 'test211.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test211',
-      },
     ],
   },
 ];
