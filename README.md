@@ -17,7 +17,6 @@ Displayed data:
 The dashboard is reachable at these addresses:
 
 - https://dashboard.tocco.ch
-- http://xmsjjm6rmqsstcjs.onion
 - http://fpmntuq7o2vcaw24sfsjyfhk7koofbrtjika7awddqyysbo5buil5gad.onion
 
 ## Deployment
