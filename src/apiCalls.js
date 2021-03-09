@@ -386,46 +386,6 @@ export default [
         label: 'test222.tocco.ch',
         buildId: 'ContinuousDeliveryNg_Test_Test222',
       },
-      {
-        label: 'test221.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test221',
-      },
-      {
-        label: 'test220.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test220',
-      },
-      {
-        label: 'test219.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test219',
-      },
-      {
-        label: 'test218.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test218',
-      },
-      {
-        label: 'test217.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test217',
-      },
-      {
-        label: 'test216.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test216',
-      },
-      {
-        label: 'test215.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test215',
-      },
-      {
-        label: 'test214.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test214',
-      },
-      {
-        label: 'test213.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test213',
-      },
-      {
-        label: 'test212.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test212',
-      },
     ],
   },
 ];
