@@ -31,6 +31,15 @@ export default [
         buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabaseMaster',
       },
       {
+        label: '2.29 - existing',
+        buildId:
+          'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabase229',
+      },
+      {
+        label: '2.29 - new',
+        buildId: 'Nice2DatabaseRefactoring_Nice2dbRefactoringNewDatabase229',
+      },
+      {
         label: '2.28 - existing',
         buildId:
           'Nice2DatabaseRefactoring_Nice2dbRefactoringExistingDatabase228',
@@ -336,8 +345,16 @@ export default [
         buildId: 'Nice2AutoMerge_IntegrationReleases228toReleases228',
       },
       {
-        label: '2.28 ➞ int/master',
-        buildId: 'Nice2AutoMerge_Releases228toIntegrationMaster',
+        label: '2.28 ➞ int/2.29',
+        buildId: 'Nice2AutoMerge_Releases228toIntegrationReleases229',
+      },
+      {
+        label: 'int/2.29 ➞ 2.29',
+        buildId: 'Nice2AutoMerge_IntegrationReleases229toReleases229',
+      },
+      {
+        label: '2.29 ➞ int/master',
+        buildId: 'Nice2AutoMerge_Releases229toIntegrationMaster',
       },
       {
         label: 'int/master ➞ master',
@@ -357,6 +374,10 @@ export default [
       {
         label: 'master.tocco.ch',
         buildId: 'ContinuousDeliveryNg_Test_Master',
+      },
+      {
+        label: 'test229.tocco.ch',
+        buildId: 'ContinuousDeliveryNg_Test_Test229',
       },
       {
         label: 'test228.tocco.ch',
@@ -381,11 +402,7 @@ export default [
       {
         label: 'test223.tocco.ch',
         buildId: 'ContinuousDeliveryNg_Test_Test223',
-      },
-      {
-        label: 'test222.tocco.ch',
-        buildId: 'ContinuousDeliveryNg_Test_Test222',
-      },
+      }
     ],
   },
 ];
